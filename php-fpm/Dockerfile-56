@@ -51,7 +51,10 @@ ARG INSTALL_MONGO=true
 ENV INSTALL_MONGO ${INSTALL_MONGO}
 RUN if [ ${INSTALL_MONGO} = true ]; then \
     # Install the mongodb extention
-    pecl install mongodb \
+    # pecl install mongodb \
+
+    # By Adrian - installing the older mongo extension
+    pecl install mongo && docker-php-ext-enable mongo \
 ;fi
 
 #

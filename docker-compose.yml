@@ -8,7 +8,7 @@ services:
         build:
             context: ./workspace
             args:
-                - INSTALL_MONGO=false
+                - INSTALL_MONGO=true
                 - INSTALL_XDEBUG=false
                 - INSTALL_NODE=false
                 - COMPOSER_GLOBAL_INSTALL=false
@@ -24,9 +24,9 @@ services:
         build:
             context: ./php-fpm
             args:
-                - INSTALL_MONGO=false
+                - INSTALL_MONGO=true
                 - INSTALL_XDEBUG=false
-            dockerfile: Dockerfile-70
+            dockerfile: Dockerfile-56
         volumes_from:
             - volumes_source
         expose:
