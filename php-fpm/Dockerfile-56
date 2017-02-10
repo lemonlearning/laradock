@@ -68,9 +68,16 @@ COPY ./xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 ARG INSTALL_MONGO=false
 RUN if [ ${INSTALL_MONGO} = true ]; then \
+
+    # Initial way - installing the newer mongodb extension
+
     # Install the mongodb extension
-    pecl install mongodb && \
-    docker-php-ext-enable mongodb \
+    # pecl install mongodb && \
+    # docker-php-ext-enable mongodb \
+
+    # By Adrian - installing the older mongo extension
+
+    pecl install mongo && docker-php-ext-enable mongo \
 ;fi
 
 #####################################

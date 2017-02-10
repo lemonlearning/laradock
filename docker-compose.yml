@@ -17,8 +17,7 @@ services:
             context: ./workspace
             args:
                 - INSTALL_XDEBUG=false
-                - INSTALL_SOAP=false
-                - INSTALL_MONGO=false
+                - INSTALL_MONGO=true
                 - INSTALL_NODE=false
                 - INSTALL_YARN=false
                 - INSTALL_DRUSH=false
@@ -51,7 +50,7 @@ services:
             args:
                 - INSTALL_XDEBUG=false
                 - INSTALL_SOAP=false
-                - INSTALL_MONGO=false
+                - INSTALL_MONGO=true
                 - INSTALL_ZIP_ARCHIVE=false
                 - INSTALL_BCMATH=false
                 - INSTALL_PHPREDIS=false
@@ -60,7 +59,7 @@ services:
                 - INSTALL_EXIF=false
                 - INSTALL_AEROSPIKE_EXTENSION=false
                 - CODEIGNITER=false
-            dockerfile: Dockerfile-70
+            dockerfile: Dockerfile-56
         volumes_from:
             - applications
         expose:
