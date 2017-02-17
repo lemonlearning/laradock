@@ -9,9 +9,8 @@ VOLUME /data/db /data/configdb
 # Added by Adrian - restore the database from dump
 # dump must be present in the mongo folder
 COPY dump /dump
-CMD mongorestore /dump
 
-CMD ["mongod"]
+CMD mongod; mongorestore /dump
 
 EXPOSE 27017
 
