@@ -17,7 +17,7 @@ services:
             args:                
                 - INSTALL_XDEBUG=${WORKSPACE_INSTALL_XDEBUG}
                 - INSTALL_SOAP=${WORKSPACE_INSTALL_SOAP}
-                - INSTALL_MONGO=true
+                - INSTALL_MONGO=${WORKSPACE_INSTALL_MONGO}
                 - INSTALL_NODE=${WORKSPACE_INSTALL_NODE}
                 - INSTALL_YARN=${WORKSPACE_INSTALL_YARN}
                 - INSTALL_DRUSH=${WORKSPACE_INSTALL_DRUSH}
@@ -50,7 +50,7 @@ services:
             args:
                 - INSTALL_XDEBUG=${PHP_FPM_INSTALL_XDEBUG}
                 - INSTALL_SOAP=${PHP_FPM_INSTALL_SOAP}
-                - INSTALL_MONGO=true
+                - INSTALL_MONGO=${PHP_FPM_INSTALL_MONGO}
                 - INSTALL_ZIP_ARCHIVE=${PHP_FPM_INSTALL_ZIP_ARCHIVE}
                 - INSTALL_BCMATH=${PHP_FPM_INSTALL_BCMATH}
                 - INSTALL_PHPREDIS=${PHP_FPM_INSTALL_PHPREDIS}
