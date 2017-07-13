@@ -111,7 +111,7 @@ services:
             - applications
         volumes:
             - ${APACHE_HOST_LOG_PATH}:/var/log/apache2
-            - ./apache2/sites:/etc/apache2/sites-available
+            - ./apache2/sites/:/etc/apache2/sites-available
            
 
         ports:
