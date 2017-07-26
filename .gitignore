@@ -1,6 +1,5 @@
 .idea
 /logs
 /data
-.env
 mongo/dump
 /.project
